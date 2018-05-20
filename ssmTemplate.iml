@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="FacetManager">
+    <facet type="Spring" name="Spring">
+      <configuration>
+        <fileset id="web application context" name="MVC application context" removed="true">
+          <file>file://$MODULE_DIR$/src/main/resources/spring/applicationContext-trans.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring/applicationContext-dao.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring/applicationContext-service.xml</file>
+        </fileset>
+        <fileset id="web helloworld servlet context" name="MVC helloworld servlet context" removed="true">
+          <dependency>web application context</dependency>
+          <file>file://$MODULE_DIR$/src/main/resources/spring/springmvc.xml</file>
+        </fileset>
+        <fileset id="fileset" name="Spring Application Context" removed="false">
+          <file>file://$MODULE_DIR$/src/main/resources/spring/applicationContext-dao.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring/applicationContext-service.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring/applicationContext-trans.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring/springmvc.xml</file>
+        </fileset>
+      </configuration>
+    </facet>
+  </component>
+</module>
