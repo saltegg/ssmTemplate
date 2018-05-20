@@ -14,6 +14,8 @@ public class CityServiceImpl implements CityService {
 
     @Override
     public City findCityById() {
-        return cityMapper.findCityById();
+        String str = null;
+        City city = cityMapper.findCityById();
+        return city;
     }
 }
