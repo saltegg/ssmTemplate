@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ssm.dao.UserMapper">
+    <resultMap id="BaseResultMap" type="com.ssm.entity.User">
+        <id column="id" property="id"/>
+        <result column="member_num" property="memberNum"/>
+        <result column="password" property="password"/>
+        <result column="balance" property="balance"/>
+        <result column="renewal_time" property="renewaled"/>
+        <result column="create_time" property="created"/>
+        <result column="consume_time" property="consumed"/>
+    </resultMap>
+    
+    <sql id="Base_Column_List">
+        id,member_num,password,balance,renewal_time,create_time,consume_time
+    </sql>
+
+    <select id="findUserByid" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from tb_member
+    </select>
+
+    <insert id="insert" parameterType="com.ssm.entity.User">
+        insert into tb_member (id,member_num,password,balance,renewal_time,create_time)
+        values (#{id},#{memberNum},#{password}#{balance},#{renewaled},#{created})
+    </insert>
+
+</mapper>
